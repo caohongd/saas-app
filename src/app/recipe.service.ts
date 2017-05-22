@@ -13,7 +13,7 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class SocialService {
+export class RecipeService {
   host:string = 'http://localhost:8080';
   userId:string = "";
 
@@ -28,13 +28,13 @@ export class SocialService {
     .map(response => response.json());
   }
 
-  getAllPosts() {
-    return this.http.get( this.host + '/api/userPost/')
+  getAllRecipes() {
+    return this.http.get( this.host + '/app/recipes')
     .map(response => response.json());
   }
 
-  getCommentsForPost(pId: string) {
-    return this.http.get( this.host + '/api/comment/post/' + pId)
+  getDetailsForRecipe(pId: string) {
+    return this.http.get( this.host + '/app/recipe/:recipeId' + pId)
     .map(response => response.json());
   }
 }

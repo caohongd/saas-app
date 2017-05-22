@@ -1,15 +1,15 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { SocialService } from './social.service';
+import { RecipeService } from './recipe.service';
 
 describe('SocialService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [SocialService]
+      providers: [RecipeService]
     });
   });
 
-  it('should be created', inject([SocialService], (service: SocialService) => {
+  it('should be created', inject([RecipeService], (service: RecipeService) => {
     expect(service).toBeTruthy();
   }));
 });
