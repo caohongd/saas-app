@@ -1,5 +1,5 @@
 import { Routes, RouterModule } from '@angular/router';
-import {AppComponent} from 'app.component';
+import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 
