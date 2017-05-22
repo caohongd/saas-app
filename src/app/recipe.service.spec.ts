@@ -2,7 +2,7 @@ import { TestBed, inject } from '@angular/core/testing';
 
 import { RecipeService } from './recipe.service';
 
-describe('SocialService', () => {
+describe('RecipeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       providers: [RecipeService]

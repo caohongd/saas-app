@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SocialService } from '../social.service';
+import { RecipeService } from '../recipe.service';
 import {Router, Params } from '@angular/router';
 
 
@@ -12,11 +12,11 @@ export class WelcomeComponent implements OnInit {
 
   recipeTitle: string;
   recipeInfo: string;
-  social$: SocialService;
+  social$: RecipeService;
   route$: Router;
 
   constructor(
-    _social: SocialService,
+    _social: RecipeService,
     _route: Router,
   ) {
     this.social$ = _social;

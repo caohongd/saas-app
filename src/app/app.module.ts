@@ -12,7 +12,7 @@ import { APP_BASE_HREF } from '@angular/common';
 import { routing } from './app-route';
 
 
-import { SocialService } from './social.service';
+import { RecipeService } from './recipe.service';
 
 
 @NgModule({
@@ -27,7 +27,7 @@ import { SocialService } from './social.service';
     HttpModule,
     routing,
   ],
-  providers: [ {provide: APP_BASE_HREF, useValue: '/'}, SocialService ],
+  providers: [ {provide: APP_BASE_HREF, useValue: '/'}, RecipeService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
