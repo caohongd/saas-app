@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { WelcomeComponent } from './welcome/welcome.component';
+import { BrowseComponent } from './browse/browse.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 
 import { APP_BASE_HREF } from '@angular/common';
@@ -13,19 +13,30 @@ import { routing } from './app-route';
 
 
 import { RecipeService } from './recipe.service';
+import { TableComponent } from './browse/table/table.component';
+import { DetailTableComponent } from './recipe-details/detail-table/detail-table.component';
+
+
+const appRoutes: Routes = [
+  {path: 'browse', component: BrowseComponent}
+];
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    WelcomeComponent,
-   RecipeDetailsComponent
+    BrowseComponent,
+   RecipeDetailsComponent,
+   TableComponent,
+   DetailTableComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     routing,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ {provide: APP_BASE_HREF, useValue: '/'}, RecipeService ],
   bootstrap: [AppComponent]

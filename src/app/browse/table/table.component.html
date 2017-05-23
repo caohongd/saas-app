@@ -1,0 +1,17 @@
+<h4 class="panel-heading" style="background-color:#337ab7" >
+  <a  [routerLink] = "['/recipe/', recipe.recipeId]" style="color:white">{{index+1}} - {{recipe.recipeTitle}}</a>
+</h4>
+
+<div class="panel-body">
+<p>{{recipe.ingredients}}</p>
+</div>
+
+<!---
+<table class="table" style="font-size:10pt;">
+  <tbody>
+    <tr>
+      <td>Posted Date: <span>{{post.date}}</span></td>
+      <td align="right">Likes: <span class="badge">{{post.like}}</span></td>
+    </tr>
+  </tbody>
+</table> -->
