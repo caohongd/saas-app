@@ -1,0 +1,23 @@
+<!-- Table -->
+<table class="table" style="font-size:10pt;">
+    <thead>
+        <tr>
+            <th>Items</th>
+            <th width="5%">Shared</th>
+            <th width="5%">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let result of details; let i = index">
+            <td>{{i+1}}. {{recipe.recipeTitle}}</td>
+            <td>{{recipe.ingredients}}<span class="badge">{{recipe.instructions}}</span></td>
+            <td>
+                <div class="input-group">
+                    <span class="input-group-addon" style="border-style:none;">
+                    <input type="checkbox">
+                    </span>
+                </div>  
+            </td>
+        </tr>
+    </tbody>
+</table>
