@@ -1,23 +1,9 @@
-<!--<div class="container">
-	<div class="panel panel-default">
-// Default panel contents 
-		<div class="panel" style="color:white; background-color:#337ab7"> 
-			<h3>{{recipe.recipeId}}. Post - {{recipe.recipeTitle}}</h3>
-			<div>
-			<a style="color:white" href="#"><span class="glyphicon glyphicon-edit"></span></a>
-			<a style="color:white" href="#"><span class="glyphicon glyphicon-trash"></span></a>
-			<a style="color:white" href="#"><span class="glyphicon glyphicon-ok"></span></a>
-			</div>
-		</div>
-		<app-detail-table [details]="recipeList"></app-detail-table>
-		//Table 
-	</div>
-</div>-->
-
-<h1> recipe title here </h1>
-  <div *ngFor= "let r of recipe">
-    
-    <h3> {{r.recipeTitle}} </h3>
-    <p> {{r.ingredients}}</p>
-
-</div>
+<h1> {{recipeObject.recipeTitle}}</h1>
+<h2> Ingredients: {{recipeObject.ingredients}} </h2>
+<h3> Instructions: {{recipeObject.instructions}} </h3>
+<b> Macronutrients </b>
+<p> Calories:{{recipeObject.calories}}</p>
+<p> Protein: {{recipeObject.protein}}<p>
+<p> Fat: {{recipeObject.fat}}</p>
+<p> Carbs: {{recipeObject.carbs}} </p>
+<p> Sugar: {{recipeObject.sugar}} </p>

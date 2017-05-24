@@ -11,7 +11,7 @@ import {ActivatedRoute, Params} from '@angular/router';
   styleUrls: ['./recipe-details.component.css']
 })
 export class RecipeDetailsComponent implements OnInit {
-recipeObject: any[];
+recipeObject: IRecipeModel;
 id: string;
 //recipeList: IRecipeModel[];
 //name: string;
@@ -43,13 +43,16 @@ id: string;
   }
 
   public getResults(){
-    this.id= /*this.route.snapshot.queryParams['q']*/ '1';
-    
+    this.id= this.route.snapshot.params.recipeId;
+    console.log('get results:' + this.id);
     this.recipe$.getDetailsForRecipe(this.id).subscribe(
       result => {
         this.recipeObject=result;
+        //console.log('recipeObject: ' + this.recipeObject);
+        //console.log('result: ' + result);
       }
     )
+    //console.log('recipe$: ' + this.recipe$);
   }
 
 }

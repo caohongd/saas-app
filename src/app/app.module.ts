@@ -15,6 +15,8 @@ import { routing } from './app-route';
 import { RecipeService } from './recipe.service';
 import { TableComponent } from './browse/table/table.component';
 import { DetailTableComponent } from './recipe-details/detail-table/detail-table.component';
+import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+
 
 
 const appRoutes: Routes = [
@@ -29,7 +31,9 @@ const appRoutes: Routes = [
     BrowseComponent,
    RecipeDetailsComponent,
    TableComponent,
-   DetailTableComponent
+   DetailTableComponent,
+   AddRecipeComponent,
+   
   ],
   imports: [
     BrowserModule,
