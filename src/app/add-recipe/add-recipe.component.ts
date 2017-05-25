@@ -12,12 +12,26 @@ export class AddRecipeComponent implements OnInit {
 @Input() createHandler: Function;
 
 
-  constructor(private RecipeService: RecipeService) { }
+  constructor(private RecipeService: RecipeService) { 
+        var testRecipe :
+  {
+    recipeTitle: 'Test',
+    recipeId: 400,
+    ingredients: 'Testing Stuff',
+    instructions: 'Do nothing',
+    calories: 500,
+    protein: 30,
+    fat: 20,
+    carbs: 10,
+    sugar: 10,
+  }
+  this.RecipeService.createRecipe(testRecipe);
+  }
+
+
 
 createRecipe(recipe: IRecipeModel){
-  this.RecipeService.createRecipe(recipe).then((newRecipe: IRecipeModel) => {
-    console.log(recipe);
-  });
+  this.RecipeService.createRecipe(recipe).subscribe(() => {}, () => {});
 }
 
 /*createNewRecipe(){

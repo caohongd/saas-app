@@ -10,9 +10,10 @@ export class RecipeService {
 
 import { Injectable } from '@angular/core';
 import { Http, Response} from '@angular/http';
+import { Headers, RequestOptions } from '@angular/http';
 import 'rxjs/add/operator/map';
 import IRecipeModel from '../models/IRecipeModel';
-import 'rxjs/add/operator/toPromise';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class RecipeService {
@@ -33,11 +34,13 @@ export class RecipeService {
     .map(response => response.json());
   }
 
-  createRecipe(newRecipe: IRecipeModel): Promise<IRecipeModel>{
-    return this.http.post(this.host + '/app/recipe/', newRecipe)
-      .toPromise()
-      .then(response => response.json() as IRecipeModel)
-      .catch(this.handleError);
+  createRecipe(newRecipe: IRecipeModel): Observable<any>{
+     let headers = new Headers({ 'Content-Type': 'application/json' });
+     let options = new RequestOptions({ headers: headers });
+
+    return this.http.post(this.host + '/app/recipe/', 
+                          JSON.stringify(newRecipe), 
+                          options);
   }
 
 
