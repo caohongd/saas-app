@@ -2,7 +2,7 @@
   <div  class="form-group">
     <label class="col-md-3 control-label">Recipe Title: </label>
     <div class="col-md-9" style="Width:auto">
-        <input class= "form-control" name="recipeTitle" [(ngModel)]= "recipeTitle" placeholder="name"/> 
+        <input class= "form-control" name="recipeTitle" [(ngModel)]= "testRecipe.recipeTitle" placeholder="name"/> 
    </div>
   </div>
 </div>
@@ -73,7 +73,7 @@
 
 
 <div class="form-group">
-  <button type="submit" allign="center" (click)= "createRecipe(recipe)"><span>Submit</span></button>
+  <button type="submit" allign="center" (click)= "createRecipe()"><span>Submit</span></button>
 </div>
 
 

@@ -10,14 +10,30 @@ import IRecipeModel from '../../models/IRecipeModel';
 export class AddRecipeComponent implements OnInit {
 @Input() recipe: IRecipeModel;
 @Input() createHandler: Function;
+testRecipe: IRecipeModel;
 
 
-  constructor(private RecipeService: RecipeService) { }
+  constructor(private RecipeService: RecipeService) { 
+         this.testRecipe =
+  {
+    recipeTitle: 'Test',
+    recipeId: 400,
+    ingredients: 'Testing Stuff',
+    instructions: 'Do nothing',
+    calories: 500,
+    protein: 30,
+    fat: 20,
+    carbs: 10,
+    sugar: 10
+  };
+  this.RecipeService.createRecipe(this.testRecipe);
+  }
 
-createRecipe(recipe: IRecipeModel){
-  this.RecipeService.createRecipe(recipe).then((newRecipe: IRecipeModel) => {
-    console.log(recipe);
-  });
+
+
+createRecipe(){
+  console.log('json object:' + JSON.stringify(this.testRecipe))
+  this.RecipeService.createRecipe(this.testRecipe).subscribe(() => {}, () => {});
 }
 
 /*createNewRecipe(){
