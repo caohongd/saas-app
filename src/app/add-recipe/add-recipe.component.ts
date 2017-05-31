@@ -10,10 +10,11 @@ import IRecipeModel from '../../models/IRecipeModel';
 export class AddRecipeComponent implements OnInit {
 @Input() recipe: IRecipeModel;
 @Input() createHandler: Function;
+testRecipe: IRecipeModel;
 
 
   constructor(private RecipeService: RecipeService) { 
-        var testRecipe :
+         this.testRecipe =
   {
     recipeTitle: 'Test',
     recipeId: 400,
@@ -23,15 +24,16 @@ export class AddRecipeComponent implements OnInit {
     protein: 30,
     fat: 20,
     carbs: 10,
-    sugar: 10,
+    sugar: 10
+  };
+  this.RecipeService.createRecipe(this.testRecipe);
   }
-  this.RecipeService.createRecipe(testRecipe);
-  }
 
 
 
-createRecipe(recipe: IRecipeModel){
-  this.RecipeService.createRecipe(recipe).subscribe(() => {}, () => {});
+createRecipe(){
+  console.log('json object:' + JSON.stringify(this.testRecipe))
+  this.RecipeService.createRecipe(this.testRecipe).subscribe(() => {}, () => {});
 }
 
 /*createNewRecipe(){
