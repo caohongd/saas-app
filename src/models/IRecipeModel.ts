@@ -9,5 +9,6 @@ interface IRecipeModel {
     fat: number;
     carbs: number;
     sugar: number;
+    goal: string;
 }
 export default IRecipeModel;

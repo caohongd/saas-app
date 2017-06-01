@@ -12,7 +12,15 @@ import {ActivatedRoute, Params} from '@angular/router';
 })
 export class RecipeDetailsComponent implements OnInit {
 recipeObject: IRecipeModel;
-id: string;
+recipeId: number;
+recipeTitle: string;
+ingredients: string;
+instructions: string;
+calories: number;
+protein: number;
+fat: number;
+carbs: number;
+sugar: number;
 //recipeList: IRecipeModel[];
 //name: string;
 //recipe: IRecipeModel;
@@ -20,7 +28,26 @@ id: string;
   constructor(
     private route: ActivatedRoute,
     private recipe$: RecipeService
-  ) {}
+  ) {
+    this.recipeId= route.snapshot.params['recipeId'];
+    console.log('get results:' + this.recipeId);
+    recipe$.getDetailsForRecipe(this.recipeId).subscribe(
+      result => {
+        this.recipeObject=result;
+        this.recipeTitle = this.recipeObject.recipeTitle;
+        this.ingredients = this.recipeObject.ingredients;
+        this.instructions = this.recipeObject.instructions;
+        this.calories = this.recipeObject.calories;
+        this.protein = this.recipeObject.protein;
+        this.fat = this.recipeObject.fat;
+        this.carbs = this.recipeObject.carbs;
+        this.sugar = this.recipeObject.sugar;
+        //this.name = "Post";
+  },
+      () => {},
+      () => {}
+    );
+  }
     /*this.recipeId= route.snapshot.params['id'];
     recipe$.getDetailsForRecipe(this.recipeId)
     .subscribe(
@@ -34,11 +61,11 @@ id: string;
    }
 */
 
-  ngOnInit(){
-    this.getResults();
+  ngOnInit():void{
+    //this.getResults();
   }
   
-  ngOnChanges(){
+  /* ngOnChanges(){
     this.getResults();
   }
 
@@ -53,6 +80,6 @@ id: string;
       }
     )
     //console.log('recipe$: ' + this.recipe$);
-  }
+  } */
 
 }
