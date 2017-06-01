@@ -8,7 +8,7 @@
 
 
 .test1{
-    background:url('../Images/blueberries.jpg') no-repeat;
+    background:url('/assets/images/blueberries.jpg') no-repeat;
     height: 300px;
     background-size: cover;
 }
