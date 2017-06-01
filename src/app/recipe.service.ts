@@ -29,7 +29,7 @@ export class RecipeService {
     .map(response => response.json());
   }
 
-  getDetailsForRecipe(pId: string) {
+  getDetailsForRecipe(pId: number) {
     return this.http.get( this.host + '/app/recipe/' + pId)
     .map(response => response.json());
   }

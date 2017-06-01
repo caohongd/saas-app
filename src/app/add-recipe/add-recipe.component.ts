@@ -24,7 +24,8 @@ testRecipe: IRecipeModel;
     protein: 30,
     fat: 20,
     carbs: 10,
-    sugar: 10
+    sugar: 10,
+    goal: 'cut'
   };
   this.RecipeService.createRecipe(this.testRecipe);
   }
