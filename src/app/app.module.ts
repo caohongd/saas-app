@@ -17,6 +17,7 @@ import { TableComponent } from './browse/table/table.component';
 import { DetailTableComponent } from './recipe-details/detail-table/detail-table.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
 import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -35,6 +36,7 @@ const appRoutes: Routes = [
    DetailTableComponent,
    AddRecipeComponent,
    HomeComponent,
+   LoginComponent,
    
   ],
   imports: [
