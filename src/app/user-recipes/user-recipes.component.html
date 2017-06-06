@@ -1,0 +1,19 @@
+<div class="container" >
+	<div class="panel panel-default" style="border-width: 0px; border-style:solid">
+		<div class="panel-default">
+			<h3>My Created Recipes</h3>
+		</div>
+		<br>
+		<div>
+			<div class="panel panel-heading" style="border-width: 1px; border-style:solid; border-color:gray;" *ngFor="let result of Recipes; let i = index">
+				<!-- Default panel contents -->
+
+				<urecipe-table [recipe]="result" [index]="i"></urecipe-table>
+				<!-- Table -->
+			</div>
+
+			<div ng-click="saveItems();">new list</div>
+			
+		</div>
+	</div>
+</div>

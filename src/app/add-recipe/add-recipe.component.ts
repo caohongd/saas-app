@@ -12,9 +12,13 @@ export class AddRecipeComponent implements OnInit {
 @Input() createHandler: Function;
 testRecipe: IRecipeModel;
 
+createdUser: string;
 
   constructor(private RecipeService: RecipeService) { 
-         this.testRecipe =
+      this.RecipeService.getUserInfo().subscribe(
+        result => {
+          this.createdUser = result.id;
+                this.testRecipe =
   {
     recipeTitle: 'Test',
     recipeId: 400,
@@ -25,9 +29,17 @@ testRecipe: IRecipeModel;
     fat: 20,
     carbs: 10,
     sugar: 10,
-    created_by: "test"
+    created_by: this.createdUser
   };
+  console.log('User ID: ' + this.createdUser);
   this.RecipeService.createRecipe(this.testRecipe);
+        },        
+        () => { this.createdUser = "not logged in"},
+        () => console.log('REST call' + this.createdUser)
+      );
+         
+         
+
   }
 
 

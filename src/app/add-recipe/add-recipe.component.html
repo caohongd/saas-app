@@ -11,7 +11,7 @@
   <div class="form-group">
     <label class="col-md-3 control-label">Ingredients:</label>
     <div class="col-md-9" style="Width:auto">
-      <input type="text" class="form-control" />
+        <input class= "form-control" name="ingredients" [(ngModel)]= "testRecipe.ingredients" placeholder="name"/> 
     </div>
   </div>
 </div>
@@ -20,7 +20,7 @@
   <div class="form-group">
     <label class="col-md-3 control-label">Instructions</label>
     <div class="col-md-9" style="Width:auto">
-      <input type="text" class="form-control" />
+        <input class= "form-control" name="instructions" [(ngModel)]= "testRecipe.instructions" placeholder="name"/> 
     </div>
   </div>
 </div>
@@ -29,7 +29,7 @@
   <div class="form-group">
     <label class="col-md-3 control-label">Calories:</label>
     <div class="col-md-9" style="Width:auto">
-      <input type="text" class="form-control" />
+        <input class= "form-control" name="calories" [(ngModel)]= "testRecipe.calories" placeholder="name"/> 
     </div>
   </div>
 </div>
@@ -38,7 +38,7 @@
   <div class="form-group">
     <label class="col-md-3 control-label">Protein (g):</label>
     <div class="col-md-9" style="Width:auto">
-      <input type="text" class="form-control" />
+        <input class= "form-control" name="protein" [(ngModel)]= "testRecipe.protein" placeholder="name"/> 
     </div>
   </div>
 </div>
@@ -47,7 +47,7 @@
   <div class="form-group">
     <label class="col-md-3 control-label">Fat (g):</label>
     <div class="col-md-9" style="Width:auto">
-      <input type="text" class="form-control" />
+        <input class= "form-control" name="fat" [(ngModel)]= "testRecipe.fat" placeholder="name"/> 
     </div>
   </div>
 </div>
@@ -56,7 +56,7 @@
   <div class="form-group">
     <label class="col-md-3 control-label">Carbyhydrates (g):</label>
     <div class="col-md-9" style="Width:auto">
-      <input type="text" class="form-control" />
+        <input class= "form-control" name="carbs" [(ngModel)]= "testRecipe.carbs" placeholder="name"/> 
     </div>
   </div>
 </div>
@@ -66,14 +66,15 @@
   <div class="form-group">
     <label class="col-md-3 control-label">Sugars (g):</label>
     <div class="col-md-9" style="Width:auto">
-      <input type="text" class="form-control" />
+        <input class= "form-control" name="sugar" [(ngModel)]= "testRecipe.sugar" placeholder="name"/> 
     </div>
   </div>
 </div>
 
 
 <div class="form-group">
-  <button type="submit" allign="center" (click)= "createRecipe()"><span>Submit</span></button>
+  <a href= "/myrecipes">
+  <button type="submit" allign="center" (click)= "createRecipe()" ><span>Submit</span></button></a>
 </div>
 
 

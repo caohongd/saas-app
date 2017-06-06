@@ -20,6 +20,8 @@ import { GoalComponent } from './goal/goal.component';
 import { GoalTableComponent } from './goal/goal-table/goal-table.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { UserRecipesComponent } from './user-recipes/user-recipes.component';
+import { UserrecTableComponent } from './user-recipes/userrec-table/userrec-table.component';
 
 
 
@@ -41,6 +43,8 @@ const appRoutes: Routes = [
    GoalTableComponent,
    HomeComponent,
    LoginComponent,
+   UserRecipesComponent,
+   UserrecTableComponent,
    
   ],
   imports: [

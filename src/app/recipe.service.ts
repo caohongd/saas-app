@@ -29,6 +29,11 @@ export class RecipeService {
     .map(response => response.json());
   }
 
+  getAllUserRecipes(userID: string) {
+    return this.http.get( this.host + '/app/usersrecipes/' + userID)
+    .map(response => response.json());
+  }
+
   getDetailsForRecipe(pId: number) {
     return this.http.get( this.host + '/app/recipe/' + pId)
     .map(response => response.json());
@@ -48,6 +53,10 @@ export class RecipeService {
                           options);
   }
 
+  getUserInfo() {
+    return this.http.get( this.host + '/auth/userdata')
+    .map(response => response.json());
+  }
 
   private handleError(error:any){
     let errMsg= (error.message) ? error.message:
