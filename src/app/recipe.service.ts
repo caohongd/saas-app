@@ -34,6 +34,11 @@ export class RecipeService {
     .map(response => response.json());
   }
 
+    getGoalRecipes(gId: string) {
+    return this.http.get( this.host + '/app/recipe/' + gId)
+    .map(response => response.json());
+  }
+
   createRecipe(newRecipe: IRecipeModel): Observable<any>{
      let headers = new Headers({ 'Content-Type': 'application/json' });
      let options = new RequestOptions({ headers: headers });
