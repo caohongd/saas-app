@@ -17,7 +17,7 @@ import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class RecipeService {
-  host:string = 'http://localhost:8080';
+  host:string = '';
  
 
   constructor(private http: Http) { }

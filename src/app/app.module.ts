@@ -16,8 +16,13 @@ import { RecipeService } from './recipe.service';
 import { TableComponent } from './browse/table/table.component';
 import { DetailTableComponent } from './recipe-details/detail-table/detail-table.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
+<<<<<<< HEAD
 import { GoalComponent } from './goal/goal.component';
 import { GoalTableComponent } from './goal/goal-table/goal-table.component';
+=======
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+>>>>>>> master
 
 
 
@@ -35,8 +40,13 @@ const appRoutes: Routes = [
    TableComponent,
    DetailTableComponent,
    AddRecipeComponent,
+<<<<<<< HEAD
    GoalComponent,
    GoalTableComponent,
+=======
+   HomeComponent,
+   LoginComponent,
+>>>>>>> master
    
   ],
   imports: [

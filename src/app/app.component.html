@@ -1,24 +1,25 @@
-	<div class="container">
-
+	<div class="container-fluid">
+		<div class="row">
 		  <!-- Static navbar -->
 		  <nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 			  <div class="navbar-header">
 					<a class="navbar-brand" href="index.html" title="Gainz Goalz">
-        <img src="/assets/logo.png " style="max-width:65px; margin-top: -14px;"></a>
+        <img src="/assets/logo.png " style="max-width:65px; margin-top: -14px;" href="/home"></a>
 				<a class="navbar-brand" >Gainz Goalz</a>
 			  </div>
 			  <div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-				  <li><a href="#">Cut</a></li>
-					<li><a href="#">Maintain</a></li>
-					<li><a href="#">Bulk</a></li>
+				  <li><a href="/recipe">Cut</a></li>
+					<li><a href="/recipe">Maintain</a></li>
+					<li><a href="/recipe">Bulk</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
-				  <li><a href="#">Login</a></li>
+				  <li><a href="/login">Login</a></li>
 				</ul>
 			  </div><!--/.nav-collapse -->
 			</div><!--/.container-fluid -->
 		  </nav>
-
+			</div>
+</div>
 <router-outlet></router-outlet>
