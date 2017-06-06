@@ -3,13 +3,9 @@ import { AppComponent } from './app.component';
 import { BrowseComponent } from './browse/browse.component';
 import { RecipeDetailsComponent } from './recipe-details/recipe-details.component';
 import { AddRecipeComponent } from './add-recipe/add-recipe.component';
-<<<<<<< HEAD
 import { GoalComponent } from './goal/goal.component';
-=======
 import {HomeComponent} from './home/home.component';
 import {LoginComponent} from './login/login.component';
-
->>>>>>> master
 
 const routes: Routes = [
     {path: '', component: HomeComponent},
