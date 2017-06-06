@@ -9,6 +9,6 @@ interface IRecipeModel {
     fat: number;
     carbs: number;
     sugar: number;
-    goal: string;
+    created_by: string;
 }
 export default IRecipeModel;

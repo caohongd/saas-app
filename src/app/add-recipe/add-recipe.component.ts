@@ -25,7 +25,7 @@ testRecipe: IRecipeModel;
     fat: 20,
     carbs: 10,
     sugar: 10,
-    goal: 'cut'
+    created_by: "test"
   };
   this.RecipeService.createRecipe(this.testRecipe);
   }
